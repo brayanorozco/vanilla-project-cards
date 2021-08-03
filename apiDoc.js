@@ -21,10 +21,14 @@ const generateCards = async () => {
                                 <div>
                                     <img src="${cardShape.featured_media}" alt="card img">
                                 </div>
-                                 <h3 class="p-card__title"> <a>${cardShape.title} <a></h3>
-                                <p class="p-card__content">By <a>${cardShape.name}</a> on ${cardShape.date.split("T")[0]}</p>
+                                <div class="card-body">
+                                <h3 class="p-card__title p-heading--4"> <a>${cardShape.title} </a></h3>
+                                </div>
+                                <p class="p-card__content p-heading--6">By <a>${cardShape.name}</a> on ${cardShape.date.split("T")[0]}</p>
+                                
                                 <hr class="is-fixed-width">
                                 <span>Article</span>
+                        
                             `;
             cardContainer.appendChild(card);
         });
