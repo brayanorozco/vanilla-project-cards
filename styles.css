@@ -1,7 +1,11 @@
-#cards-container{
-    height: 100vh;
+/* #cards-container{
+     height: 100vh;
+}
+ */
+.card-body{
+    height: 110px;
 }
 
-.card-body{
-    height: 100px;
-}
+.p-card--highlighted {
+    border-top: 0.2rem solid #775973;
+    } 
