@@ -2,6 +2,7 @@ const url = 'https://people.canonical.com/~anthonydillon/wp-json/wp/v2/posts.jso
 let cardContainer = document.querySelector('#cards-container')
 
 const generateCards = async () => {
+    //Taking the information from the API
     try {
         const res = await fetch(url);
         const data = await res.json();
@@ -12,6 +13,9 @@ const generateCards = async () => {
                 featured_media: cardData.featured_media,
                 name: cardData._embedded.author[0].name
             };
+
+            //Adding elements and the information from "cardShape"
+
             const card = document.createElement('div')
             card.classList.add('p-card--highlighted', 'col-4')
             card.setAttribute('style', "min-height: 400px;")
@@ -37,41 +41,3 @@ const generateCards = async () => {
 }
 
 generateCards()
-
-
-
-// fetch(url)
-//     .then(response => response.json())
-//     .then(apiData => {
-
-//         //apiData contains all the information that was taken from the API.
-
-//         apiData.forEach(fromApi => {
-//             console.log(fromApi)
-//             let cardData = {
-//                 title: fromApi.title.rendered,
-//                 date: fromApi.date,
-//                 featured_media: fromApi.featured_media,
-//                 name: fromApi._embedded.author[0].name
-//             };
-//               const card = document.createElement('div')
-//               card.innerHTML = `
-//               <div class="p-card--highlighted col-4">
-//                     <span>CLOUD AND SERVER</span>
-//                     <hr class="is-fixed-width">
-//                     <div>
-//                         <img src="${cardData.featured_media}" alt="card img">
-//                     </div>
-//                     <h3 class="p-card__title">We'd love to have you join us as a partner.</h3>
-//                     <p class="p-card__content">If you are an independent software vendor or bundle author, it's easy to apply.
-//                         You can find out more below.</p>
-//                     <hr class="is-fixed-width">
-//                 </div>
-//               `
-//             cardsData.push(cardData);
-//         });
-//         console.log(cardsData);
-
-//         //cardData filters the information and pushes it to cardsData, which is the array containing all the card data.
-//     })
-//     .catch(err => console.log(err))
