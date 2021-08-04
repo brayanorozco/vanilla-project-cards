@@ -2,11 +2,12 @@ const url = 'https://people.canonical.com/~anthonydillon/wp-json/wp/v2/posts.jso
 let cardContainer = document.querySelector('#cards-container')
 
 const generateCards = async () => {
-    //Taking the information from the API
+
+    //Fetching API's information
     try {
         const res = await fetch(url);
-        const data = await res.json();
-        data.forEach(cardData => {
+        const apiData = await res.json();
+        apiData.forEach(cardData => {
             let cardShape = {
                 title: cardData.title.rendered,
                 date: cardData.date,
@@ -14,7 +15,18 @@ const generateCards = async () => {
                 name: cardData._embedded.author[0].name
             };
 
-            //Adding elements and the information from "cardShape"
+            //Formating articles' date using toLocaleDateString()
+
+            function formatDate(articleDate) {
+
+                let date = new Date(articleDate)
+                return date.toLocaleDateString('en-UK', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: '2-digit'
+                });
+            }
+            //Creating the HTML elements (cards)
 
             const card = document.createElement('div')
             card.classList.add('p-card--highlighted', 'col-4')
@@ -28,10 +40,9 @@ const generateCards = async () => {
                                 <div class="card-body">
                                     <h3 class="p-card__title p-heading--4"> <a>${cardShape.title} </a></h3>
                                 </div>
-                                <p class="p-card__content p-heading--6">By <a>${cardShape.name}</a> on ${cardShape.date.split("T")[0]}</p>
+                                <p class="p-card__content p-heading--6">By <a>${cardShape.name}</a> on ${formatDate(cardShape.date.split("T")[0])}</p>
                                 <hr class="is-fixed-width">
-                                <span>Article</span>
-                        
+                                <span>Article</span>                        
                             `;
             cardContainer.appendChild(card);
         });
