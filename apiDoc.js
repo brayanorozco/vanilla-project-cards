@@ -15,7 +15,7 @@ const generateCards = async () => {
                 name: cardData._embedded.author[0].name
             };
 
-            //Formating articles' date using toLocaleDateString()
+            //Formating dates using a function and the toLocaleDateString() method.
 
             function formatDate(articleDate) {
 
@@ -26,13 +26,13 @@ const generateCards = async () => {
                     day: '2-digit'
                 });
             }
-            //Creating the HTML elements (cards)
+            //Creating the HTML elements (cards).
 
             const card = document.createElement('div')
             card.classList.add('p-card--highlighted', 'col-4')
-            card.setAttribute('style', "min-height: 400px;")
+            card.setAttribute('style', "min-height: 450px;")
             card.innerHTML = `
-                                <span>CLOUD AND SERVER</span>
+                                <p>CLOUD AND SERVER</p>
                                 <hr class="is-fixed-width">
                                 <div>
                                     <img src="${cardShape.featured_media}" alt="card img">
@@ -41,8 +41,9 @@ const generateCards = async () => {
                                     <h3 class="p-card__title p-heading--4"> <a>${cardShape.title} </a></h3>
                                 </div>
                                 <p class="p-card__content p-heading--6">By <a>${cardShape.name}</a> on ${formatDate(cardShape.date.split("T")[0])}</p>
+                                
                                 <hr class="is-fixed-width">
-                                <span>Article</span>                        
+                                <p class="p-text--small">Article</p>                        
                             `;
             cardContainer.appendChild(card);
         });

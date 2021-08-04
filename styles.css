@@ -1,16 +1,42 @@
-/* #cards-container{
-     height: 100vh;
+* {
+    margin: 0;
+    padding: 0;
 }
- */
-.card-body{
-    height: 110px;
+
+
+/* ------------------Card Styles--------------------------------- */
+
+.cards-container {
+    min-height: 500px;
+    margin-top: 6%;
+
 }
 
 .p-card--highlighted {
-    border-top: 0.2rem solid #775973;
-    }
+    border-top: 0.2rem solid #A97CA1;
+}
 
-/* span{
-    background-color: aqua;
-    height: 100%;
-} */
+
+.p-card__title {
+    font-size: 115.6%;
+    /* font-size: 1.306122449rem; */
+}
+
+.card-body {
+    height: 100px;
+}
+
+
+/* ------------------General Styles--------------------------------- */
+hr {
+    border: none;
+    border-top: 1px dotted gray;
+    color: #fff;
+    background-color: #fff;
+    height: 1px;
+    width: 50%;
+}
+
+a {
+    color: #06c;
+}
