@@ -1,11 +1,11 @@
 const url = 'https://people.canonical.com/~anthonydillon/wp-json/wp/v2/posts.json';
 
+//Fetching API's information
 const generateCards = async () => {
-
-    //Fetching API's information
     try {
         const res = await fetch(url);
         const apiData = await res.json();
+        
         apiData.forEach(cardData => {
             let cardShape = {
                 title: cardData.title.rendered,
