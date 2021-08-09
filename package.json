@@ -1,0 +1,27 @@
+{
+  "name": "vanilla-project-cards",
+  "version": "1.0.0",
+  "description": "![image](https://user-images.githubusercontent.com/82540037/128314372-4feeb7d5-1da8-4dca-a004-080d9b4c3aa5.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss sass/main.scss public/css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "devstart": "nodemon -e css server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brayanorozco/vanilla-project-cards.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brayanorozco/vanilla-project-cards/issues"
+  },
+  "homepage": "https://github.com/brayanorozco/vanilla-project-cards#readme",
+  "dependencies": {
+    "build-css": "^0.2.0",
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.12"
+  }
+}
