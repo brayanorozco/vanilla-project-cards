@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/brayanorozco/vanilla-project-cards#readme",
   "dependencies": {
-    "build-css": "^0.2.0",
+    "build-css": "^0.0.1",
     "node-sass": "^6.0.1",
     "nodemon": "^2.0.12"
   }
