@@ -1,20 +1,17 @@
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
+/* ------------------ Sass variables--------------------------------- */
 /* ------------------Card Styles--------------------------------- */
 .cards-container {
-  min-height: 500px;
-  margin-top: 6%; }
+  margin-top: 6%;
+}
 
 .p-card--highlighted {
-  border-top: 0.2rem solid #A97CA1; }
-
-.p-card__title {
-  font-size: 115.6%; }
-
-.card-body {
-  height: 100px; }
+  border-top: 0.2rem solid #a97ca1;
+}
 
 /* ------------------General Styles--------------------------------- */
 hr {
@@ -23,7 +20,6 @@ hr {
   color: #fff;
   background-color: #fff;
   height: 1px;
-  width: 50%; }
-
-a {
-  color: #06c; }
+  width: 50%;
+}
+/*# sourceMappingURL=main.css.map */
