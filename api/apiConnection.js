@@ -1,3 +1,4 @@
+const fetch = require("node-fetch");
 const url = 'https://people.canonical.com/~anthonydillon/wp-json/wp/v2/posts.json';
 
 //Fetching API's information
@@ -13,13 +14,20 @@ const generateCards = async () => {
                 featured_media: cardData.featured_media,
                 name: cardData._embedded.author[0].name
             };
-
-            createCard(cardShape)
+            console.log(cardShape);
         });
+
     } catch (err) {
         console.log("It wasn't possible to reach the information", err)
     }
 }
+
+generateCards();
+
+module.exports = generateCards;
+
+
+/* 
 
 //Creating the HTML elements (cards).
 
@@ -56,6 +64,4 @@ function formatDate(articleDate) {
         month: 'long',
         day: '2-digit'
     });
-}
-
-generateCards();
+} */
