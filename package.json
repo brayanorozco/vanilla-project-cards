@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path scss sass/main.scss public/css/main.css",
+    "build-css": "node-sass --include-path scss public/sass/main.scss public/css/main.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
     "devstart": "nodemon -e css server.js"
   },
@@ -21,6 +21,8 @@
   "homepage": "https://github.com/brayanorozco/vanilla-project-cards#readme",
   "dependencies": {
     "build-css": "^0.0.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
     "node-sass": "^6.0.1",
     "nodemon": "^2.0.12"
   }

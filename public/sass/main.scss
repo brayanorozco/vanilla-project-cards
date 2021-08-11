@@ -3,23 +3,30 @@
   padding: 0;
 }
 
-/* ------------------ Sass variables--------------------------------- */
+$white: #fff;
+
+@mixin topCardColor() {
+  border-top: 0.2rem solid #a97ca1;
+}
+
 /* ------------------Card Styles--------------------------------- */
+
 .cards-container {
   margin-top: 6%;
 }
 
 .p-card--highlighted {
-  border-top: 0.2rem solid #a97ca1;
+  @include topCardColor();
 }
 
 /* ------------------General Styles--------------------------------- */
 hr {
   border: none;
   border-top: 1px dotted gray;
-  color: #fff;
-  background-color: #fff;
+  color: $white;
+  background-color: $white;
   height: 1px;
   width: 50%;
 }
-/*# sourceMappingURL=main.css.map */
+
+
