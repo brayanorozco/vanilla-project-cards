@@ -6,25 +6,28 @@ const apiConnection = async () => {
     try {
         const res = await fetch(url);
         const apiData = await res.json();
-        
-        apiData.forEach(cardData => {
-            let cardShape = {
-                title: cardData.title.rendered,
-                date: cardData.date,
-                featured_media: cardData.featured_media,
-                name: cardData._embedded.author[0].name
-            };
-            //console.log(cardShape);
-            return cardShape;
-        });
+
+        return apiData;
+
     } catch (err) {
         console.log("It wasn't possible to reach the information", err)
     }
 }
 
-apiConnection();
-
 module.exports = apiConnection;
+
+
+/*    apiData.forEach(cardData => {
+        let cardShape = {
+            title: cardData.title.rendered,
+            date: cardData.date,
+            featured_media: cardData.featured_media,
+            name: cardData._embedded.author[0].name
+        };
+    
+        return apiData;
+    }); */
+
 
 
 /* 
