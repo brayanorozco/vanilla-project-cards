@@ -1,22 +1,16 @@
 const route = require('express').Router();
 const apiConnection = require('../../api/apiConnection');
 
-
 apiConnection().then((data) => {
 
-    let apiData = JSON.stringify(data)
-
-    //console.log(apiData);
+    let apiData = data;
 
     route.get("/", (req, res) => {
 
         res.render('home', {
             apiData
         });
-
     });
-    //console.log(apiData);
 })
-
 
 module.exports = route;
