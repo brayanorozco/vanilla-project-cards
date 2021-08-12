@@ -2,7 +2,7 @@ const fetch = require("node-fetch");
 const url = 'https://people.canonical.com/~anthonydillon/wp-json/wp/v2/posts.json';
 
 //Fetching API's information
-const generateCards = async () => {
+const apiConnection = async () => {
     try {
         const res = await fetch(url);
         const apiData = await res.json();
@@ -14,17 +14,17 @@ const generateCards = async () => {
                 featured_media: cardData.featured_media,
                 name: cardData._embedded.author[0].name
             };
-            console.log(cardShape);
+            //console.log(cardShape);
+            return cardShape;
         });
-
     } catch (err) {
         console.log("It wasn't possible to reach the information", err)
     }
 }
 
-generateCards();
+apiConnection();
 
-module.exports = generateCards;
+module.exports = apiConnection;
 
 
 /* 
