@@ -16,21 +16,7 @@ const apiConnection = async () => {
 module.exports = apiConnection;
 
 
-/*    apiData.forEach(cardData => {
-        let cardShape = {
-            title: cardData.title.rendered,
-            date: cardData.date,
-            featured_media: cardData.featured_media,
-            name: cardData._embedded.author[0].name
-        };
-    
-        return apiData;
-    }); */
-
-
-
 /* 
-
 //Creating the HTML elements (cards).
 
 let cardContainer = document.querySelector('#cards-container')
