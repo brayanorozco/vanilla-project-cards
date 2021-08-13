@@ -3,17 +3,24 @@
   padding: 0; }
 
 /* ------------------Card Styles--------------------------------- */
-.cards-container {
-  margin-top: 6%; }
-
 .p-card--highlighted {
-  border-top: 0.2rem solid #a97ca1; }
+  border-top: 0.2rem solid #a97ca1;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-align: center; }
+
+.p-card__title {
+  overflow: hidden; }
 
 /* ------------------General Styles--------------------------------- */
-hr {
+body {
+  min-height: 100vh; }
+
+.card_footer {
+  margin: auto .5rem 0;
   border: none;
-  border-top: 1px dotted gray;
-  color: #fff;
-  background-color: #fff;
-  height: 1px;
-  width: 50%; }
+  border-top: 1px dotted gray; }
+
+.card_header {
+  border: none;
+  border-bottom: 1px dotted gray; }

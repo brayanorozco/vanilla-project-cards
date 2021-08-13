@@ -6,11 +6,12 @@ route.get("/", async (req, res) => {
     try {
         const apiData = await apiConnection();
         res.render('home', {
-            apiData
+            apiData,
+            helper: require('../utils/formatDates'),
         });
     } catch (err) {
         res.render('error', {
-            error: 'Hello, this is an error'
+            error: err
         })
     }
 });

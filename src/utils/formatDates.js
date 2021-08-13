@@ -1,6 +1,4 @@
-const app = require('../../server');
-
-app.locals.formatDate = (blogDate) => {
+module.exports = formatDate = (blogDate) => {
 
     let date = new Date(blogDate)
     return date.toLocaleDateString('en-UK', {

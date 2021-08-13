@@ -7,26 +7,35 @@ $white: #fff;
 
 @mixin topCardColor() {
   border-top: 0.2rem solid #a97ca1;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-align: center;
 }
 
 /* ------------------Card Styles--------------------------------- */
-
-.cards-container {
-  margin-top: 6%;
-}
 
 .p-card--highlighted {
   @include topCardColor();
 }
 
-/* ------------------General Styles--------------------------------- */
-hr {
-  border: none;
-  border-top: 1px dotted gray;
-  color: $white;
-  background-color: $white;
-  height: 1px;
-  width: 50%;
+.p-card__title {
+
+  overflow: hidden;
 }
 
+/* ------------------General Styles--------------------------------- */
 
+body {
+  min-height: 100vh;
+}
+
+.card_footer {
+  margin: auto .5rem 0;
+  border: none;
+  border-top: 1px dotted gray;
+}
+
+.card_header {
+  border: none;
+  border-bottom: 1px dotted gray;
+}
