@@ -1,14 +1,15 @@
    <% apiData.forEach(cardData =>{ %>
- 
-    <div class="p-card--highlighted col-4">
-       
+
+   <div class="p-card--highlighted col-4">
+
        <p class="card_header">CLOUD AND SERVER</p>
        <hr class="is-fixed-width">
        <div>
            <img src="<%= cardData.featured_media %>" alt="">
        </div>
-       <h3 class="p-card__title p-heading--4"><a href=""><%= cardData.title.rendered %></a></h3>
-       <p class="p-card__content p-heading--6">By <a href=""> <%= cardData._embedded.author[0].name %> </a> on <%- formatDate(cardData.date.split("T")[0]) %></p>
+       <h3 class="p-card__title p-heading--4"><a href="<%= cardData.link %>"><%= cardData.title.rendered %></a></h3>
+       <p class="p-card__content p-heading--6">By <a href="<%= cardData._embedded.author[0].link %>">
+               <%= cardData._embedded.author[0].name %> </a> on <%- formatDate(cardData.date.split("T")[0]) %></p>
 
        <p class="card_footer">Article</p>
    </div>
