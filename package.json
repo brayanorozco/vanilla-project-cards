@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss public/sass/main.scss public/css/main.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
-    "devstart": "nodemon -e css server.js"
+    "devstart": "nodemon -e css index.js"
   },
   "repository": {
     "type": "git",

@@ -5,12 +5,11 @@ const url = 'https://people.canonical.com/~anthonydillon/wp-json/wp/v2/posts.jso
 const apiConnection = async () => {
     try {
         const res = await fetch(url);
-        const apiData = await res.json();
-
-        return apiData;
+        return res.json();
 
     } catch (err) {
         console.log("It wasn't possible to reach the information", err)
+        throw err;
     }
 }
 
@@ -34,9 +33,10 @@ module.exports = apiConnection;
 
 //Creating the HTML elements (cards).
 
+let cardContainer = document.querySelector('#cards-container')
+
 function createCard(cardShape) {
 
-    let cardContainer = document.querySelector('#cards-container')
     const card = document.createElement('div')
     card.classList.add('p-card--highlighted', 'col-4')
     card.setAttribute('style', "min-height: 450px;")
