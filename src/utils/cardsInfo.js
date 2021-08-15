@@ -27,22 +27,3 @@ module.exports = function cardsInfo(data) {
         console.log("The data couldn't be proccessed: ", error);
     }
 }
-
-
-/* module.exports = function cardsTitle(data) {
-
-    try {
-
-        data.forEach(element => {
-            const {
-                name
-            } = element._embedded["wp:term"][2][0] || element._embedded["wp:term"][1][0]
-            let titleName = name;
-            
-            return titleName;
-        });
-
-    } catch (error) {
-        console.log("The data couldn't be proccessed: ", error);
-    }
-} */

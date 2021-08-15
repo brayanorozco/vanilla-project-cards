@@ -9,7 +9,7 @@ route.get("/", async (req, res) => {
 
         res.render('home', {
             data,
-            helper: require('../utils/formatDates'),
+            formatDate: require('../utils/formatDates'),
         });
     } catch (err) {
         res.render('error', {
