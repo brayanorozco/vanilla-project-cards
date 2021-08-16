@@ -1,16 +1,22 @@
 # BLOG CARDS USING VANILLA FRAMEWORK
 
-_A simple project in which three blog's cards are displayed, with the information taken directly from an API._
+_A simple project in which three blog cards are displayed, with the information taken directly from an API._
 
-## Screenshot
 
-![image](https://user-images.githubusercontent.com/82540037/129616837-4fd9ef5f-f1d3-42e5-896c-561faa09c16d.png)
+### Screenshot
+
+![image](https://user-images.githubusercontent.com/82540037/129624613-0d8c03f0-bf76-4db0-b4b7-5f954dd584a2.png)
+
+
 
 ## Prerequisites
 
 🔹 _Code editor._
+
 🔹 _Package Manager for JavaScript._
+
 🔹 _Vanilla Framework (It's used via hotlink in this project)._
+
 
 
 ## Get started 🚀
@@ -28,23 +34,36 @@ You'll get the following message on the terminal: 'Server is running: http://loc
 ```
 _
 
+
 ### Optional 
 
 🔹 _Start Sass running the following command: npm run watch-css_
 
 
+
+
 ## Folders and files 📦
 
 🔹 _api: In this folder you will find the file 'apiConnection.js' which is responsible for fetching the API information._
+
 🔹 _public: Contains the CSS and Sass files._
-🔹_src: _It contains most of the files needed for the project to work._ 
 
-        🔹 _partials: Inside this folder are the files 'cards.ejs' and 'head.ejs' which are then inserted into the file 'home.ejs'.
-        🔹 _routes: The 'home.js' file is in charge of rendering the home page.
-        🔹 _utils: cardsInfo' and 'formatDates' contain two functions, one returns the filtered information to 'home.js' and the other returns the date in the format shown on the card._
-        🔹 _views: Contain the views of the project (EJS files)._
+🔹_src: _It contains most of the files needed for the project to work:_ 
 
-🔹 _'index.js' and 'server.js': These are the files with the necessary configuration to run the project.
+        🔹 partials: Inside this folder are the files 'cards.ejs' and 'head.ejs' which
+            are then inserted into the file 'home.ejs'.
+
+        🔹 routes: The 'home.js' file is in charge of rendering the home page.
+
+        🔹 utils: cardsInfo' and 'formatDates' contain two functions, one returns the filtered
+            information to 'home.js' and the other returns the date in the format shown on the
+            card.
+
+        🔹 views: Contain the views of the project (EJS files).
+
+🔹 _'index.js' and 'server.js': These are the files with the necessary configuration to run the project._
+
+
 
 
 ## Project made using 🛠️ 
