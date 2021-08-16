@@ -48,7 +48,7 @@ _
 
 🔹 _public: Contains the CSS and Sass files._
 
-🔹_src: _It contains most of the files needed for the project to work:_ 
+🔹_src: It contains most of the files needed for the project to work:_ 
 
         🔹 partials: Inside this folder are the files 'cards.ejs' and 'head.ejs' which
             are then inserted into the file 'home.ejs'.
