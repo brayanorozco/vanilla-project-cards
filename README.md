@@ -14,21 +14,3 @@ https://people.canonical.com/~anthonydillon/wp-json/wp/v2/posts.json
 
 Run SASS: npm run watch-css
 Run Project: npm run devstart
-
-
-CategoryRoute: cardData._embedded['wp:term'][2][0].name
-
-wp:term:[
-    [
-     {cate}
-    ]
-    [
-     {tags}
-    ]
-    [
-     {topic}
-    ]
-    [
-     {group}
-    ]
-]

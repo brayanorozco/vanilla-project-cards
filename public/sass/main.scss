@@ -1,41 +1,39 @@
+@mixin topCardColor() {
+  border-top: 0.2rem solid #a97ca1;
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin dottedLines($borderTop, $borderBotton) {
+  border-top: $borderTop;
+  border-bottom: $borderBotton;
+}
+
+/* ------------------General Styles--------------------------------- */
+
 * {
   margin: 0;
   padding: 0;
 }
 
-$white: #fff;
-
-@mixin topCardColor() {
-  border-top: 0.2rem solid #a97ca1;
-  display: flex;
-  flex-direction: column;
-  -ms-flex-align: center;
-}
-
 /* ------------------Card Styles--------------------------------- */
-
-.p-card--highlighted {
-  @include topCardColor();
-}
-
-.p-card__title {
-
-  overflow: hidden;
-}
-
-/* ------------------General Styles--------------------------------- */
 
 body {
   min-height: 100vh;
+
+  .p-card--highlighted {
+    @include topCardColor();
+
+    .card__header {
+      padding: 10px 8px 10px;
+      @include dottedLines(0, 1px dotted gray);
+    }
+
+    .card__footer {
+      padding-top: 15px;
+      margin: auto 0.5px;
+      @include dottedLines(1px dotted gray, 0);
+    }
+  }
 }
 
-.card_footer {
-  margin: auto .5rem 0;
-  border: none;
-  border-top: 1px dotted gray;
-}
-
-.card_header {
-  border: none;
-  border-bottom: 1px dotted gray;
-}

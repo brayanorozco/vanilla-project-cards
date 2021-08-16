@@ -2,6 +2,7 @@ const fetch = require("node-fetch");
 const url = 'https://people.canonical.com/~anthonydillon/wp-json/wp/v2/posts.json';
 
 //Fetching API's information
+
 const apiConnection = async () => {
     try {
         const res = await fetch(url);

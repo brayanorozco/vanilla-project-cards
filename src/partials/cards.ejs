@@ -1,16 +1,16 @@
    <% data.forEach(cardData =>{ %>
 
    <div class="p-card--highlighted col-4">
+       <p class="card__header p-text--small"> <%- cardData.headerTitle.toUpperCase() %> </p>
 
-       <p class="card_header"> <%- cardData.name.toUpperCase() %> </p>
-       <div>
-           <img src="<%= cardData.source %>" alt="">
-       </div>
+       <a href="<%= cardData.titleLink %>">
+           <img src="<%= cardData.imgSource %>" alt="<%= cardData.imgAlt %>">
+       </a>
+
        <h3 class="p-card__title p-heading--4"><a href="<%= cardData.titleLink %>"><%= cardData.title %></a></h3>
        <p class="p-card__content p-heading--6">By <a href="<%= cardData.authorLink %>">
                <%= cardData.author %> </a> on <%- formatDate(cardData.date) %></p>
-
-       <p class="card_footer"><%= cardData.cardFooter %></p>
+           <p class="card__footer p-text--small"><%= cardData.cardFooter %></p>
    </div>
 
    <% }) %>

@@ -1,3 +1,5 @@
+//Gets the information from the 'home.js' and returns the needed data
+
 module.exports = function cardsInfo(data) {
     let cardsArray = [];
 
@@ -5,13 +7,15 @@ module.exports = function cardsInfo(data) {
 
         data.forEach(element => {
 
-            const {
-                name
-            } = element._embedded["wp:term"][2][0] || element._embedded["wp:term"][1][0];
+            let cardHeaderRoute = element._embedded["wp:term"];
+            let topic = cardHeaderRoute[2][0];
+            let tag = cardHeaderRoute[1][0];
+            const {name} = topic || tag;
 
             let card = {
-                name,
-                source: element.featured_media,
+                headerTitle: name,
+                imgSource: element.featured_media,
+                imgAlt: element.slug,
                 title: element.title.rendered,
                 titleLink: element.link,
                 authorLink: element._embedded.author[0].link,
